@@ -15,6 +15,17 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                poppins: ['Poppins', 'sans-serif'],
+            },
+            colors: {
+                milkChoco: "#885B43",
+                dykeBrown: "#6A4430",
+                deer: "#C48665",
+                tan: "#D4AF88",
+                wheat: "#F4DCB3",
+                wheelGreen: "#35A123",
+                vividTangelo: "#EC7926",
+                mustard: "#FFD150",
             },
         },
     },
