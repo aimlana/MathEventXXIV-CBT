@@ -17,6 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Admin Route
+Route::get('admin/login', function () {
+    return view('admin.login-admin');
+});
+Route::get('admin/dashboard', function () {
+    return view('admin.dashboard-admin');
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
