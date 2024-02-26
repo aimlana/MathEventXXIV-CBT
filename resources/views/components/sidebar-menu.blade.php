@@ -12,7 +12,11 @@
     {{-- Logout menu --}}
     <div class="flex items-start mt-72">
         <i class="fa-solid fa-arrow-right-from-bracket text-xl pe-6"></i>
-        <a href="#" class="text-lg">Logout</a>
+
+        <form method="POST" action="{{ route('logout') }}" x-data>
+            @csrf
+            <a href="{{ route('logout') }}" class="text-lg" @click.prevent="$root.submit();">Logout</a>
+        </form>
     </div>
 
 </div>
