@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
-            <x-authentication-card-logo />
+            <h1 class="text-4xl font-bold text-milkChoco drop-shadow-md">REGISTER</h1>
         </x-slot>
 
         <x-validation-errors class="mb-4" />
@@ -51,7 +51,7 @@
                     {{ __('Already registered?') }}
                 </a>
 
-                <x-button class="ms-4">
+                <x-button class="ms-4 px-8">
                     {{ __('Register') }}
                 </x-button>
             </div>

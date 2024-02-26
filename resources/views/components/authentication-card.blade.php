@@ -1,6 +1,6 @@
 <div class="min-h-screen flex flex-col px-6 justify-center ms-40">
     <div>
-        {{ $title }}
+        {{ $logo }}
     </div>
 
     <div class="w-full sm:max-w-md mt-3 py-4">
