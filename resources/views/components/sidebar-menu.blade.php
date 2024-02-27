@@ -8,9 +8,12 @@
     <div class="flex items-center mt-10">
         @yield('menu-content3')
     </div>
+    <div class="flex items-center mt-10">
+        @yield('menu-content4')
+    </div>
 
     {{-- Logout menu --}}
-    <div class="flex items-start mt-72">
+    <div class="flex items-start mt-40">
         <i class="fa-solid fa-arrow-right-from-bracket text-xl pe-6"></i>
 
         <form method="POST" action="{{ route('logout') }}" x-data>

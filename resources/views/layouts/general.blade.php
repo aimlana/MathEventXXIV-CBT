@@ -21,8 +21,10 @@
     <body class="font-poppins antialiased">
 
         <main class="flex items-start justify-start">
-            @yield('sidebar')
-            <div class="container">
+            <div class="fixed">
+                @yield('sidebar')
+            </div>
+            <div class="container ms-60">
                 <div class="flex flex-col mt-4 ms-8">
                     <div>
                         <img src="{{ asset('images/full-logo-me.png') }}" alt="" class="h-20">

@@ -25,7 +25,11 @@
         @endsection
         @section('menu-content3')
             <i class="fa-solid fa-list-check text-xl pe-6"></i>
-            <a href="#" class="text-lg">Dashboard</a>
+            <a href="#" class="text-lg">Soal Tes</a>
+        @endsection
+        @section('menu-content4')
+            <i class="fa-solid fa-circle-exclamation text-xl pe-6"></i>
+            <a href="#" class="text-lg">Informasi</a>
         @endsection
     </x-sidebar-menu>
 @endsection
@@ -35,7 +39,7 @@
 
 {{-- Dashboard Main Content --}}
 @section('content')
-    <div class="flex justify-center items-center mt-20 translate-y-3/4">
+    <div class="flex justify-center items-center mt-52">
         {{-- Info Jumlah Peserta SMA --}}
         <div class="flex flex-col items-start justify-start bg-wheat ps-10 pe-32 py-8 rounded-md me-8">
             <h4 class="text-6xl text-milkChoco font-bold">200</h4>
