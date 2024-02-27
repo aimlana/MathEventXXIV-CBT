@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('soal_smas', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('sub_soal_id')->default(1);
             $table->string('soal,512');
             $table->string('jawaban_a')->nullable();
             $table->string('jawaban_b')->nullable();
@@ -21,6 +22,7 @@ return new class extends Migration
             $table->string('jawaban_e')->nullable();
             $table->string('jawaban_benar');
             $table->timestamps();
+            $table->foreign('sub_soal_id')->references('id')->on('sub_soals');
         });
     }
 
