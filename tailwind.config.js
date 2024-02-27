@@ -23,6 +23,7 @@ export default {
                 deer: "#C48665",
                 tan: "#D4AF88",
                 wheat: "#F4DCB3",
+                whiteCoffee: "#EADFD9",
                 wheelGreen: "#35A123",
                 vividTangelo: "#EC7926",
                 mustard: "#FFD150",
