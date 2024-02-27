@@ -3,7 +3,7 @@
         <x-authentication-card>
             <x-slot name="logo">
                 <h1 class="text-4xl font-bold text-milkChoco drop-shadow-md">LOGIN</h1>
-                <p class="italic text-milkChoco font-light">Silakan masukkan username dan password yang telah terdaftar
+                <p class="italic text-milkChoco font-light mt-1">Silakan masukkan username dan password yang telah terdaftar
                 </p>
             </x-slot>
 

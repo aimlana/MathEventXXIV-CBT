@@ -22,9 +22,13 @@
 
         <main class="flex items-start justify-start">
             @yield('sidebar')
-            <div class="flex  mt-4 ms-8">
-                <img src="{{ asset('images/full-logo-me.png') }}" alt="" class="h-20">
-                @yield('content')
+            <div class="container">
+                <div class="flex flex-col mt-4 ms-8">
+                    <div>
+                        <img src="{{ asset('images/full-logo-me.png') }}" alt="" class="h-20">
+                    </div>
+                    @yield('content')
+                </div>
             </div>
         </main>
 
