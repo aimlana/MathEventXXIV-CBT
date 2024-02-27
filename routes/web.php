@@ -24,6 +24,9 @@ Route::get('admin/login', function () {
 Route::get('admin/dashboard', function () {
     return view('admin.dashboard-admin');
 });
+Route::get('admin/soal-tes', function () {
+    return view('admin.soal-tes');
+});
 
 Route::middleware([
     'auth:sanctum',
