@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 // Admin Route
 Route::get('admin/login', function () {
     return view('admin.login-admin');
@@ -37,6 +38,19 @@ Route::get('admin/soal-tes', function () {
 Route::get('admin/informasi', function () {
     return view('admin.informasi');
 })->name('admin.informasi');
+
+
+// User
+Route::get('user/profile', function () {
+    return view('user.profile');
+})->name('user.profile');
+Route::get('user/ujian', function () {
+    return view('user.ujian');
+})->name('user.ujian');
+Route::get('user/informasi', function () {
+    return view('user.informasi');
+})->name('user.informasi');
+
 
 Route::middleware([
     'auth:sanctum',
