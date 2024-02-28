@@ -21,12 +21,22 @@ Route::get('/', function () {
 Route::get('admin/login', function () {
     return view('admin.login-admin');
 });
+
 Route::get('admin/dashboard', function () {
     return view('admin.dashboard-admin');
-});
+})->name('admin.dashboard');
+
+Route::get('admin/peserta', function () {
+    return view('admin.peserta');
+})->name('admin.peserta');
+
 Route::get('admin/soal-tes', function () {
     return view('admin.soal-tes');
-});
+})->name('admin.soal-tes');
+
+Route::get('admin/informasi', function () {
+    return view('admin.informasi');
+})->name('admin.informasi');
 
 Route::middleware([
     'auth:sanctum',
