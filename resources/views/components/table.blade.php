@@ -98,12 +98,12 @@
                             <td
                                 class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
                                 <div class="flex flex-col justify-center">
-                                    <div
-                                        class="py-1.5 bg-amber-400 text-white flex justify-center items-center rounded">
-                                        <i class="fa-solid fa-pen"></i></div>
-                                    <div
-                                        class="py-1.5 bg-red-500 text-white flex justify-center items-center rounded mt-1">
-                                        <i class="fa-solid fa-trash"></i></div>
+                                    <button type="button"
+                                        class="py-2 bg-sky-600 text-white flex justify-center items-center rounded">
+                                        <i class="fa-solid fa-pen"></i></button>
+                                    <button type="button"
+                                        class="py-2 bg-red-500 text-white flex justify-center items-center rounded mt-1">
+                                        <i class="fa-solid fa-trash"></i></button>
                                 </div> 
                             </td>
                         </tr>
