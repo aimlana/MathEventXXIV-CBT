@@ -8,7 +8,7 @@
     <x-sidebar-admin></x-sidebar-admin>
 @endsection
 
-{{-- Dashboard Main Content --}}
+{{-- Main Content --}}
 @section('content')
     <div class="flex justify-center items-center mt-52">
         {{-- Info Jumlah Peserta SMA --}}
