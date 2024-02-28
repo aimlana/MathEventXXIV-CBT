@@ -8,7 +8,7 @@
     <x-sidebar-admin></x-sidebar-admin>
 @endsection
 
-{{-- Soal Tes Main Content --}}
+{{-- Main Content --}}
 @section('content')
     
 @endsection
