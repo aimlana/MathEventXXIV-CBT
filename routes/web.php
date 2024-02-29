@@ -60,4 +60,7 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    Route::get('/profile', function () {
+        return view('profile.show');
+    })->name('profile.show');
 });
