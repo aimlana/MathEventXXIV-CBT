@@ -6,10 +6,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class SoalSma extends Model
+class SoalSiswa extends Model
 {
     use HasFactory;
-
     protected $fillable=[
         'soal',
         'sub_soal_id',
@@ -18,7 +17,8 @@ class SoalSma extends Model
         'jawaban_c',
         'jawaban_d',
         'jawaban_e',
-        'jawaban_benar'
+        'jawaban_benar',
+        'poin'
     ];
     public function SubSoal(): BelongsTo
     {

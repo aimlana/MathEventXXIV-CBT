@@ -16,7 +16,16 @@
 
             <div class="mt-4">
                 <x-label for="email" value="{{ __('Email') }}" />
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
+                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="email" />
+            </div>
+
+            <div class="mt-4">
+                <x-label for="usertype" value="{{ __('Usertype') }}" />
+                <select name="usertype" id="usertype"
+                    class= "drop-shadow-md shadow-tan border-transparent focus:drop-shadow-md focus:border-deer focus:ring-deer rounded-md shadow-sm placeholder-whiteCoffee w-full">
+                    <option value="sma">Sma</option>
+                    <option value="mahasiswa">Mahasiswa</option>
+                </select>
             </div>
 
             <div class="mt-4">

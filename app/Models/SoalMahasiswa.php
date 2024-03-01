@@ -18,7 +18,8 @@ class SoalMahasiswa extends Model
         'jawaban_c',
         'jawaban_d',
         'jawaban_e',
-        'jawaban_benar'
+        'jawaban_benar',
+        'poin'
     ];
     public function SubSoal(): BelongsTo
     {
