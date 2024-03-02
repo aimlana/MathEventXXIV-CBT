@@ -35,6 +35,10 @@ Route::get('admin/soal-tes', function () {
     return view('admin.soal-tes');
 })->name('admin.soal-tes');
 
+Route::get('admin/input-soal', function () {
+    return view('admin.input-soal');
+})->name('admin.input-soal');
+
 Route::get('admin/informasi', function () {
     return view('admin.informasi');
 })->name('admin.informasi');
@@ -44,9 +48,11 @@ Route::get('admin/informasi', function () {
 Route::get('user/profile', function () {
     return view('user.profile');
 })->name('user.profile');
+
 Route::get('user/ujian', function () {
     return view('user.ujian');
 })->name('user.ujian');
+
 Route::get('user/informasi', function () {
     return view('user.informasi');
 })->name('user.informasi');
