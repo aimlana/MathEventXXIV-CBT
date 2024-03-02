@@ -7,9 +7,7 @@
                         <h3 class="font-semibold text-base text-white">Bank Soal</h3>
                     </div>
                     <div class="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
-                        <a href="#"
-                            class="bg-white text-milkChoco active:text-tan text-xs font-medium px-4 py-2 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
-                            <i class="fa-solid fa-plus me-2"></i>Input Soal</a>
+                        @yield('button')
                     </div>
                 </div>
             </div>
