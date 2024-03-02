@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\SoalSma;
+use App\Models\SoalSiswa;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
@@ -34,24 +34,26 @@ class SoalSiswaController extends Controller
         try {
             $request->validate([
                 'soal'=> 'required|image|mimes:jpeg,png,jpg|max:512',
-                'jawaban_a'=>'required',
-                'jawaban_b'=>'required',
-                'jawaban_c'=>'required',
-                'jawaban_d'=>'required',
-                'jawaban_e'=>'required',
-                'jawaban_benar'=>'required',
+                'jawaban_a'=>'nullable',
+                'jawaban_b'=>'nullable',
+                'jawaban_c'=>'nullable',
+                'jawaban_d'=>'nullable',
+                'jawaban_e'=>'nullable',
+                'jawaban_benar'=>'nullable',
+                'poin'=>'required|max:100'
             ]);
 
             $fotoPath = $request->file('soal')->store('uploads', 'public');
 
-            SoalSma::create([
+            SoalSiswa::create([
                 'soal'=>$fotoPath,
                 'jawaban_a'=>$request->input('jawaban_a'),
                 'jawaban_b'=>$request->input('jawaban_b'),
                 'jawaban_c'=>$request->input('jawaban_c'),
                 'jawaban_d'=>$request->input('jawaban_d'),
                 'jawaban_e'=>$request->input('jawaban_e'),
-                'jawaban_benar'=>$request->input('jawaban_benar')
+                'jawaban_benar'=>$request->input('jawaban_benar'),
+                'poin'=>$request->input('poin')
             ]);
 
             return redirect()->back()->with('success','Data berhasil disimpan');
@@ -77,7 +79,7 @@ class SoalSiswaController extends Controller
      */
     public function edit(string $id)
     {
-        $data = SoalSma::find($id);
+        $data = SoalSiswa::find($id);
         if (!$data){
             return redirect()->back()->with('error','Data tidak ditemukan');
         }
@@ -93,15 +95,16 @@ class SoalSiswaController extends Controller
         try{
             $request->validate([
                 'soal'=> 'required|image|mimes:jpeg,png,jpg|max:512',
-                'jawaban_a'=>'required',
-                'jawaban_b'=>'required',
-                'jawaban_c'=>'required',
-                'jawaban_d'=>'required',
-                'jawaban_e'=>'required',
-                'jawaban_benar'=>'required',
+                'jawaban_a'=>'nullable',
+                'jawaban_b'=>'nullable',
+                'jawaban_c'=>'nullable',
+                'jawaban_d'=>'nullable',
+                'jawaban_e'=>'nullable',
+                'jawaban_benar'=>'nullable',
+                'poin'=>'required|max:100'
             ]);
 
-            $data = SoalSma::find($id);
+            $data = SoalSiswa::find($id);
 
             if(!$data){
                 return redirect()->back()->with('error','Data tidak ditemukan');
@@ -116,6 +119,7 @@ class SoalSiswaController extends Controller
             $data->jawaban_d = $request->input('jawaban_d');
             $data->jawaban_e = $request->input('jawaban_e');
             $data->jawaban_benar = $request->input('jawaban_benar');
+            $data->poin = $request->input('poin');
 
             $data->save();
 
@@ -135,7 +139,7 @@ class SoalSiswaController extends Controller
     public function destroy(string $id)
     {
         try {
-            $soal = SoalSma::find($id);
+            $soal = SoalSiswa::find($id);
 
             if (!$soal) {
                 return redirect()->back()->with('error', 'Data tidak ditemukan');

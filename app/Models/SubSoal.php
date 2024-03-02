@@ -9,12 +9,13 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class SubSoal extends Model
 {
     use HasFactory;
+    
     protected $fillable =[
         'jenis_soal'
     ];
     public function SoalSma(): HasMany
     {
-        return $this->hasMany(SoalSma::class);
+        return $this->hasMany(SoalSiswa::class);
     }
     public function SoalMahasiswa(): HasMany
     {
