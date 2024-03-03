@@ -35,13 +35,17 @@ Route::get('admin/soal-tes', function () {
     return view('admin.soal-tes');
 })->name('admin.soal-tes');
 
-Route::get('admin/input-soal', function () {
+Route::get('admin/soal-tes/input-soal', function () {
     return view('admin.input-soal');
 })->name('admin.input-soal');
 
 Route::get('admin/informasi', function () {
     return view('admin.informasi');
 })->name('admin.informasi');
+
+Route::get('admin/informasi/tambah-informasi', function () {
+    return view('admin.tambah-informasi');
+})->name('admin.tambah-informasi');
 
 
 // User
