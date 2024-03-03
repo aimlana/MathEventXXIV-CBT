@@ -35,7 +35,7 @@
                 </select>
             </div>
             <div class="mt-16">
-                <button class="w-full inline-flex justify-center items-center py-2 bg-milkChoco border border-transparent rounded-md font-semibold text-sm text-white tracking-widest hover:bg-dykeBrown focus:bg-dykeBrown active:bg-dykeBrown focus:outline-none focus:ring-2 focus:ring-dykeBrown focus:ring-offset-2 transition ease-in-out duration-150">Upload</button>
+                <button type="submit" class="w-full inline-flex justify-center items-center py-2 bg-milkChoco border border-transparent rounded-md font-semibold text-sm text-white tracking-widest hover:bg-dykeBrown focus:bg-dykeBrown active:bg-dykeBrown focus:outline-none focus:ring-2 focus:ring-dykeBrown focus:ring-offset-2 transition ease-in-out duration-150">Upload</button>
             </div>
         </form>
     </div>
