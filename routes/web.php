@@ -39,6 +39,14 @@ Route::get('admin/soal-tes/input-soal', function () {
     return view('admin.input-soal');
 })->name('admin.input-soal');
 
+Route::get('admin/soal-tes/input-soal/pilihan-ganda', function () {
+    return view('admin.soal-pilihan-ganda');
+})->name('admin.soal-pilihan-ganda');
+
+Route::get('admin/soal-tes/input-soal/essay', function () {
+    return view('admin.soal-essay');
+})->name('admin.soal-essay');
+
 Route::get('admin/informasi', function () {
     return view('admin.informasi');
 })->name('admin.informasi');
