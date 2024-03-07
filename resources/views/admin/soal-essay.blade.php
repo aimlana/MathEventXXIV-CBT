@@ -1,7 +1,7 @@
 @extends('layouts.general')
 
 {{-- Tab Menu Name --}}
-@section('title', 'Informasi')
+@section('title', 'Soal Pilihan Essay')
 
 {{-- Sidebar --}}
 @section('sidebar')
