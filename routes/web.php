@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Middleware\UserMiddleware;
+use App\Http\Middleware\AdminMiddleware;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,61 +18,68 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    if (Auth::check()) {
+        return redirect()->route('redirect');
+    } else {
+        return view('welcome');
+    }
 });
 
+Route::get('/redirect',[HomeController::class, 'index'])->name('redirect');
 
-// Admin Route
-Route::get('admin/login', function () {
-    return view('admin.login-admin');
+//Admin Middleware
+Route::middleware(['auth:sanctum', 'verified',AdminMiddleware::class])->group(function(){
+    Route::get('admin/login', function () {
+        return view('admin.login-admin');
+    });
+
+    Route::get('admin/dashboard', function () {
+        return view('admin.dashboard-admin');
+    })->name('admin.dashboard');
+
+    Route::get('admin/peserta', function () {
+        return view('admin.peserta');
+    })->name('admin.peserta');
+
+    Route::get('admin/soal-tes', function () {
+        return view('admin.soal-tes');
+    })->name('admin.soal-tes');
+
+    Route::get('admin/soal-tes/input-soal', function () {
+        return view('admin.input-soal');
+    })->name('admin.input-soal');
+
+    Route::get('admin/soal-tes/input-soal/pilihan-ganda', function () {
+        return view('admin.soal-pilihan-ganda');
+    })->name('admin.soal-pilihan-ganda');
+
+    Route::get('admin/soal-tes/input-soal/essay', function () {
+        return view('admin.soal-essay');
+    })->name('admin.soal-essay');
+
+    Route::get('admin/informasi', function () {
+        return view('admin.informasi');
+    })->name('admin.informasi');
+
+    Route::get('admin/informasi/tambah-informasi', function () {
+        return view('admin.tambah-informasi');
+    })->name('admin.tambah-informasi');
 });
 
-Route::get('admin/dashboard', function () {
-    return view('admin.dashboard-admin');
-})->name('admin.dashboard');
+//User Middleware
+Route::middleware(['auth:sanctum', 'verified',UserMiddleware::class])->group(function(){
+    Route::get('user/profile', function () {
+        return view('user.profile');
+    })->name('user.profile');
 
-Route::get('admin/peserta', function () {
-    return view('admin.peserta');
-})->name('admin.peserta');
+    Route::get('user/ujian', function () {
+        return view('user.ujian');
+    })->name('user.ujian');
 
-Route::get('admin/soal-tes', function () {
-    return view('admin.soal-tes');
-})->name('admin.soal-tes');
-
-Route::get('admin/soal-tes/input-soal', function () {
-    return view('admin.input-soal');
-})->name('admin.input-soal');
-
-Route::get('admin/soal-tes/input-soal/pilihan-ganda', function () {
-    return view('admin.soal-pilihan-ganda');
-})->name('admin.soal-pilihan-ganda');
-
-Route::get('admin/soal-tes/input-soal/essay', function () {
-    return view('admin.soal-essay');
-})->name('admin.soal-essay');
-
-Route::get('admin/informasi', function () {
-    return view('admin.informasi');
-})->name('admin.informasi');
-
-Route::get('admin/informasi/tambah-informasi', function () {
-    return view('admin.tambah-informasi');
-})->name('admin.tambah-informasi');
-
-
-// User
-Route::get('user/profile', function () {
-    return view('user.profile');
-})->name('user.profile');
-
-Route::get('user/ujian', function () {
-    return view('user.ujian');
-})->name('user.ujian');
-
-Route::get('user/informasi', function () {
-    return view('user.informasi');
-})->name('user.informasi');
-
+    Route::get('user/informasi', function () {
+        return view('user.informasi');
+    })->name('user.informasi');
+});
 
 Route::middleware([
     'auth:sanctum',
