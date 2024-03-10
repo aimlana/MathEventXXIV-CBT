@@ -18,6 +18,8 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->enum('usertype',['admin','sma','mahasiswa','disqualified']);
+            $table->string('nomor_induk')->nullable();
+            $table->string('instansi')->nullable();
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();

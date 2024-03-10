@@ -11,15 +11,15 @@ class JawabanMahasiswa extends Model
     use HasFactory;
     protected $fillable = [
         'user_id',
-        'sub_soal_id',
+        'soal_siswa_id',
         'jawaban',
     ];
     public function User(): BelongsTo
     {
         return $this->belongsTo(User::class,'user_id');
     }
-    public function SubSoal(): BelongsTo
+    public function SoalMahasiswa(): BelongsTo
     {
-        return $this->belongsTo(SubSoal::class,'sub_soal_id');
+        return $this->belongsTo(SoalMahasiswa::class,'soal_mahasiswa_id');
     }
 }

@@ -11,27 +11,28 @@
 {{-- Main Content --}}
 @section('content')
     <div class="flex justify-center items-center">
-        <form action="" method="POST" class="mt-16">
+        <form action="{{url('admin/soal-tes/input-soal')}}" method="POST" enctype="multipart/form-data" ="mt-16">
+            @csrf
             <div class="flex flex-col">
                 <label for="nama-tes" class="text-milkChoco font-medium">Nama Tes</label>
-                <input type="text" class="w-full drop-shadow-md shadow-tan border-transparent focus:drop-shadow-md focus:border-deer focus:ring-deer rounded-md shadow-sm">
+                <input type="text" name="nama_soal" @required(true) class="w-full drop-shadow-md shadow-tan border-transparent focus:drop-shadow-md focus:border-deer focus:ring-deer rounded-md shadow-sm">
             </div>
             <div class="flex w-full mt-6">
                 <div class="flex flex-col">
                     <label for="nama-tes" class="text-milkChoco font-medium">Pilihan Ganda</label>
-                    <input type="number" class="w-1/2 drop-shadow-md shadow-tan border-transparent focus:drop-shadow-md focus:border-deer focus:ring-deer rounded-md shadow-sm">
+                    <input type="number" name="soal_pilihan_ganda" min="0" class="w-1/2 drop-shadow-md shadow-tan border-transparent focus:drop-shadow-md focus:border-deer focus:ring-deer rounded-md shadow-sm">
                 </div>
                 <div class="flex flex-col">
                     <label for="nama-tes" class="text-milkChoco font-medium">Essay</label>
-                    <input type="number" class="w-1/2 drop-shadow-md shadow-tan border-transparent focus:drop-shadow-md focus:border-deer focus:ring-deer rounded-md shadow-sm">
+                    <input type="number" name="soal_essay" min="0" class="w-1/2 drop-shadow-md shadow-tan border-transparent focus:drop-shadow-md focus:border-deer focus:ring-deer rounded-md shadow-sm">
                 </div>
             </div>
             <div class="flex flex-col mt-6">
                 <label for="nama-tes" class="text-milkChoco font-medium">Nama Tes</label>
-                <select name="" id="" class="w-full drop-shadow-md shadow-tan border-transparent focus:drop-shadow-md focus:border-deer focus:ring-deer rounded-md shadow-sm text-milkChoco">
+                <select name="jenis_soal" id="" class="w-full drop-shadow-md shadow-tan border-transparent focus:drop-shadow-md focus:border-deer focus:ring-deer rounded-md shadow-sm text-milkChoco">
                     <option selected value="" class="">Pilih Tingkatan</option>
-                    <option value="">1</option>
-                    <option value="">2</option>
+                    <option value="SMA">SMA</option>
+                    <option value="MAHASISWA">MAHASISWA</option>
                 </select>
             </div>
             <div class="mt-16">
