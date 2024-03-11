@@ -40,14 +40,14 @@
                         <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
                     </label>
                 </div>
-    
+
                 <div class="flex items-center justify-end mt-4">
                     @if (Route::has('password.request'))
                         <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
                             {{ __('Forgot your password?') }}
                         </a>
                     @endif
-    
+
                     <x-button class="ms-4">
                         {{ __('Log in') }}
                     </x-button>
@@ -59,8 +59,8 @@
         <div class="flex flex-col justify-center items-end ms-72 -mt-24">
             <div class="flex items-center mb-6">
                 <img src="{{ asset('images/logounhas.png') }}" alt="logo-unhas" class="w-16">
-                <img src="{{ asset('images/himatika.png') }}" alt="logo-himatika" class="w-16">
                 <img src="{{ asset('images/mipa.png') }}" alt="logo-kmfmipa" class="w-16">
+                <img src="{{ asset('images/himatika.png') }}" alt="logo-himatika" class="w-16">
             </div>
             <h2 class="text-3xl text-white my-4">Welcome To</h2>
             <h3 class="text-end text-5xl text-white font-bold">UJIAN ONLINE

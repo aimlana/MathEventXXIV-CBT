@@ -13,7 +13,7 @@
     <x-table>
     {{-- Table Title --}}
     @section('title-table', 'Daftar Peserta')
-    
+
     {{-- Table's Action Button --}}
     @section('button')
         <a href="#"
@@ -56,28 +56,31 @@
 
     {{-- Table Content --}}
     @section('table-content')
-        <tr>
-            <th
-                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-                1
-            </th>
-            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                Kahfi
-            </td>
-            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                891100062
-            </td>
-            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                MAN 1 Makassar
-            </td>
-            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                12:05:20
-            </td>
-            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-                <button type="button" class="py-2 text-red-600 text-lg flex justify-center items-center rounded mt-1">
-                    <i class="fa-solid fa-square-xmark"></i></button>
-            </td>
-        </tr>
+    @foreach ($data as $data)
+    <tr>
+        <th
+            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+            {{$data->id}}
+        </th>
+        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+            {{$data->name}}
+        </td>
+        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+            {{$data->nomor_induk}}
+        </td>
+        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+            {{$data->instansi}}
+        </td>
+        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+            12:05:20
+        </td>
+        <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+            <button type="button" class="py-2 text-red-600 text-lg flex justify-center items-center rounded mt-1">
+                <i class="fa-solid fa-square-xmark"></i></button>
+        </td>
+    </tr>
+    @endforeach
+
     @endsection
 </x-table>
 @endsection
