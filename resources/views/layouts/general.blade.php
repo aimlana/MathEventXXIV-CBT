@@ -26,8 +26,9 @@
             </div>
             <div class="container ms-60">
                 <div class="flex flex-col mt-4 mx-8">
-                    <div>
+                    <div class="flex justify-between items-center">
                         <img src="{{ asset('images/full-logo-me.png') }}" alt="" class="h-20">
+                        @yield('all-logos')
                     </div>
                     @yield('content')
                 </div>
