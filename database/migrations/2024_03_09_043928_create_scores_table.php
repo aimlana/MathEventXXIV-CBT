@@ -15,6 +15,9 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('sub_soal_id');
+            $table->integer('jawaban_benar');
+            $table->integer('jawaban_salah');
+            $table->integer('jawaban_kosong');
             $table->integer('nilai');
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users');

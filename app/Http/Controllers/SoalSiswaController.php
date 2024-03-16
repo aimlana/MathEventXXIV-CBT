@@ -33,6 +33,7 @@ class SoalSiswaController extends Controller
     {
         try {
             $request->validate([
+                'sub_soal'=>'required',
                 'soal'=> 'required|image|mimes:jpeg,png,jpg|max:512',
                 'jawaban_a'=>'nullable',
                 'jawaban_b'=>'nullable',
@@ -46,6 +47,7 @@ class SoalSiswaController extends Controller
             $fotoPath = $request->file('soal')->store('uploads', 'public');
 
             SoalSiswa::create([
+                'sub_soal'=> $request->input('sub_soal'),
                 'soal'=>$fotoPath,
                 'jawaban_a'=>$request->input('jawaban_a'),
                 'jawaban_b'=>$request->input('jawaban_b'),
@@ -94,6 +96,7 @@ class SoalSiswaController extends Controller
     {
         try{
             $request->validate([
+                'sub_soal'=>'required',
                 'soal'=> 'required|image|mimes:jpeg,png,jpg|max:512',
                 'jawaban_a'=>'nullable',
                 'jawaban_b'=>'nullable',
@@ -113,6 +116,7 @@ class SoalSiswaController extends Controller
                 $fotoPath = $request->file('soal')->store('uploads','public');
                 $data->soal=$fotoPath;
             }
+            $data->sub_soal = $request->input('sub_soal');
             $data->jawaban_a = $request->input('jawaban_a');
             $data->jawaban_b = $request->input('jawaban_b');
             $data->jawaban_c = $request->input('jawaban_c');
