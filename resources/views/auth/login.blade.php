@@ -57,11 +57,7 @@
         </x-authentication-card>
 
         <div class="flex flex-col justify-center items-end ms-72 -mt-24">
-            <div class="flex items-center mb-6">
-                <img src="{{ asset('images/logounhas.png') }}" alt="logo-unhas" class="w-16">
-                <img src="{{ asset('images/himatika.png') }}" alt="logo-himatika" class="w-16">
-                <img src="{{ asset('images/mipa.png') }}" alt="logo-kmfmipa" class="w-16">
-            </div>
+            <x-all-logo />
             <h2 class="text-3xl text-white my-4">Welcome To</h2>
             <h3 class="text-end text-5xl text-white font-bold">UJIAN ONLINE
                 <br>MATHEMATICS EVENT

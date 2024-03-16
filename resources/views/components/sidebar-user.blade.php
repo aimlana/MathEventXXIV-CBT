@@ -1,8 +1,7 @@
 <x-sidebar>
     @section('profile')
         <a href="#" class="rounded-full w-28 h-28 hover:drop-shadow-xl">
-            <img src="{{ asset('images/profile-pict.jpg') }}" alt="profile-picture"
-                class="object-cover rounded-full w-full h-full">
+            <x-user-profile-picture />
         </a>
         <h1 class="font-medium text-xl mt-6">Go Youn Jung</h1>
     @endsection
