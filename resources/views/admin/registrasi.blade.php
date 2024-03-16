@@ -8,6 +8,7 @@
     <x-sidebar-admin></x-sidebar-admin>
 @endsection
 
+{{-- Main Content --}}
 @section('content')
-
+    
 @endsection

@@ -10,7 +10,7 @@
 
 {{-- Main Content --}}
 @section('content')
-    <div class="flex justify-center items-center">
+    <div class="flex justify-center items-center mt-20">
         <form action="{{url('admin/soal-tes/input-soal')}}" method="POST" enctype="multipart/form-data" ="mt-16">
             @csrf
             <div class="flex flex-col">

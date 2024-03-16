@@ -44,7 +44,7 @@
             class="flex items-center justify-start w-full py-4
             {{ request()->routeIs('admin.registrasi') || (!str_contains(request()->route()->uri, 'admin') && !str_contains(request()->route()->uri, 'edit')) ? 'bg-wheat text-milkChoco' : ' hover:text-wheat' }}">
             <div class="flex items-center justify-center px-10">
-                <i class="fa-solid fa-circle-exclamation text-xl pe-6"></i>
+                <i class="fa-solid fa-user-plus text-xl pe-6"></i>
                 <h3 href="#" class="text-lg font-medium">Registrasi Peserta</h3>
             </div>
         </a>
